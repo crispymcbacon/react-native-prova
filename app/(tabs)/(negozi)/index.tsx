@@ -45,7 +45,7 @@ export default function Index() {
     item: { id: string; name: string; image: any };
   }) => (
     <Link
-      href={{ pathname: "/(tabs)/(negozi)/[id]", params: { id: item.id } }}
+      href={{ pathname: "/(negozi)/[id]", params: { id: item.id } }}
       style={{
         width: columnWidth,
         margin: 5,

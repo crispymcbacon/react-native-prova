@@ -1,5 +1,5 @@
 import { useLocalSearchParams } from "expo-router";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Button } from "react-native";
 import { Image } from "expo-image";
 
 // Import the shops data
@@ -15,21 +15,29 @@ const shops = [
     id: "1",
     name: "Calia",
     image: shopImages.shop1,
+    description:
+      "Calia è un negozio di mobili di alta qualità con una vasta gamma di prodotti per arredare la tua casa con stile e comfort.",
   },
   {
     id: "2",
     name: "Lube",
     image: shopImages.shop2,
+    description:
+      "Lube offre una selezione di cucine moderne e funzionali, progettate per soddisfare ogni esigenza e gusto personale.",
   },
   {
     id: "3",
     name: "Arredo3",
     image: shopImages.shop3,
+    description:
+      "Arredo3 è specializzato in soluzioni di arredamento innovative e di design, perfette per creare ambienti unici e accoglienti.",
   },
   {
     id: "4",
     name: "Veneta Cucine",
     image: shopImages.shop4,
+    description:
+      "Veneta Cucine propone cucine eleganti e di alta qualità, realizzate con materiali pregiati e attenzione ai dettagli.",
   },
 ];
 
@@ -45,6 +53,8 @@ export default function ShopDetail() {
     <View style={styles.container}>
       <Image source={shop.image} style={styles.image} />
       <Text style={styles.title}>{shop.name}</Text>
+      <Text style={styles.description}>{shop.description}</Text>
+      <Button title="Associa profilo" onPress={() => {}} />
     </View>
   );
 }
@@ -63,5 +73,9 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginTop: 16,
+  },
+  description: {
+    fontSize: 16,
+    marginTop: 8,
   },
 });
